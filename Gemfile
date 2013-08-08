@@ -37,3 +37,30 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'devise'
+gem 'figaro'
+
+group :assets do
+  gem 'compass-rails'
+  gem 'therubyracer', :platform=>:ruby
+  gem 'zurb-foundation'
+end
+
+group :development do
+  gem 'hub', :require=>nil
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :production do
+  gem 'thin'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'email_spec'
+end
+
