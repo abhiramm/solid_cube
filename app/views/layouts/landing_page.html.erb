@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Talking Slate" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Talking Slate" %>">
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= yield(:head) %>
+</head>
+<body class="<%= controller_name %> <%= action_name %>">
+ <div class="container top-bar home-border hide-for-small">
+   <div class="row">
+    <div class="attached">
+      <div class="name" onclick="void(0);">
+        <span><a href="#">Talking Slate</a></span>
+  		</div>
+   </div>
+  		
+  	</div>
+  </div>
+  <div class="row">
+    <div class="large-10 columns">
+    <%= yield %>
+  </div>
+  </div>
+</body>
+</html>

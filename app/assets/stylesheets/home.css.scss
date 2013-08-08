@@ -1,3 +1,66 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top-bar .name a:link, .top-bar .name a:visited 
+{
+  font-weight:bold;
+  color:white;
+  margin-left: 19px;
+}
+.signin_button{
+  
+ background-color:#003b6f;
+ 
+}
+.start_right
+{
+  margin-left:400px;
+  margin-top:20px;
+}
+
+#footer
+{
+  margin-top:400px;
+}
+/*
+
+.email{
+  
+   color:#003b6f;
+   font-size:15px;
+   font-weight: bold;
+}
+
+
+.password{
+  
+   color:#003b6f;
+   font-size:15px;
+   font-weight: bold;
+}
+
+.boolean{
+    color:#003b6f;
+   
+  
+}
+.row{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+a{
+  color:#003b6f;
+}
+
+#generalsettings {
+  font-size: 0.8em;
+}
+
+*/
+.button a:visited
+{
+  color:white !important;
+}

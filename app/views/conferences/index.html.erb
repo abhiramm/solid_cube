@@ -1,0 +1,43 @@
+<h1>Listing conferences</h1>
+
+<table>
+  <tr>
+    <th>Subject</th>
+    <th>Category</th>
+    <th>Class start</th>
+    <th>Class end</th>
+    <th>Slots avialable</th>
+    <th>Recurrence</th>
+    <th>Cost</th>
+    <th>Payment options</th>
+    <th>Alternate contact details</th>
+    <th>Upload demo video</th>
+    <th>Upload ad</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @conferences.each do |conference| %>
+  <tr>
+    <td><%= conference.subject %></td>
+    <td><%= conference.category %></td>
+    <td><%= conference.class_start %></td>
+    <td><%= conference.class_end %></td>
+    <td><%= conference.slots_avialable %></td>
+    <td><%= conference.recurrence %></td>
+    <td><%= conference.cost %></td>
+    <td><%= conference.payment_options %></td>
+    <td><%= conference.alternate_contact_details %></td>
+    <td><%= conference.upload_demo_video %></td>
+    <td><%= conference.upload_ad %></td>
+    <td><%= link_to 'Show', conference %></td>
+    <td><%= link_to 'Edit', edit_conference_path(conference) %></td>
+    <td><%= link_to 'Destroy', conference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Conference', new_conference_path %>

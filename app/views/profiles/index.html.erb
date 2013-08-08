@@ -1,0 +1,47 @@
+<h1>Listing profiles</h1>
+
+<table>
+  <tr>
+    <th>Profile pic</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Address</th>
+    <th>Contact no</th>
+    <th>School</th>
+    <th>College</th>
+    <th>about_video</th>
+    <th>Higher education</th>
+    <th>Certification</th>
+    <th>Interested in learning</th>
+    <th>Would like to teach</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @profiles.each do |profile| %>
+  <tr>
+    <td><%= profile.profile_pic %></td>
+    <td><%= profile.first_name %></td>
+    <td><%= profile.last_name %></td>
+    <td><%= profile.address %></td>
+    <td><%= profile.contact_no %></td>
+    <td><%= profile.school %></td>
+    <td><%= profile.college %></td>
+    <td><%= profile.about_video_html %>
+    <td><%= profile.higher_education %></td>
+    <td><%= profile.certification %></td>
+    <td><%= profile.interested_in_learning %></td>
+    <td><%= profile.would_like_to_teach %></td>
+    <td><%= profile.user_id %></td>
+    <td><%= link_to 'Show', profile %></td>
+    <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+    <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Profile', new_profile_path %>

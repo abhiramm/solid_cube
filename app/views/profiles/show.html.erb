@@ -1,0 +1,81 @@
+
+<div class = "row">
+  <p id="notice"><%= notice %></p>
+  <div class="large-3 columns">
+        <%# image_tag @profile.profile_pic_url(:thumb).to_s %>
+            <p>
+              <b> <%= @profile.first_name %></b>
+            </p>
+         <!--   <p>
+              <b>Age:</b>
+              <%# @profile.current_user.name %>
+            </p>-->
+   <div id="generalsettings">
+      Account Settings <br/> User History <br/> Sessions History <br/> Upcoming Sessions<br /><br />
+      <b>School bag</b>
+      <% @conferences.each do |c|%>
+
+      <p>
+        <b><%= link_to c.subject, c %><b><br />
+          <%= c.category %>&nbsp<%= c.class_start %>
+        </p> <br />
+        <% end %>
+      </div>
+      <p>
+        Recommended Courses
+      </p>
+      <p>
+        People/Institute Following
+      </p>
+   </div>
+ 
+ <div class="large-7 columns" id="middlecolumn">
+    <input type="search" placeholder="Search">
+    <div class="large-12 columns" id="email">
+      <div class="espan">
+        <p>Email/Messages</p>
+      </div>
+    </div>
+
+    <div class="large-12 columns" id="vidad">
+      <div class="large-6 columns" id="dvideofc">
+        <%= @profile.about_video_html %>
+      </div>
+      <div class="large-6 columns" id="ads">
+        Ad
+      </div>
+    </div>
+    <div class="large-12 columns">
+      <div class="large-6 left columns" id="btn">
+        <%= link_to 'Go to Class Room', new_bigbluebutton_room_path, :class => 'button radius medium' %>
+      </div>
+      <div class="large-6 right columns" id="btn">
+        <%= link_to 'Create Session', new_conference_path, :class => 'button radius medium' %>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="large-2 columns" id="rightcolumn">
+    <% if @conferences.count >= 1 %>
+
+    <a href="/conferences/show">
+      <div class="button radius small disabled alert">  <%= link_to 'Sessions on', conferences_path %></div>
+    </a>
+
+    <% else %>
+
+    <div class="button radius small alert">  Sessions off </div>
+    <% end %>
+  </div>
+ 
+</div>
+
+  <div class ="row" id="footer">
+    <div class="large-8 large-centered columns">
+    </div>
+    <div class="large-4 columns">
+      <p>Feedback</p>
+      <p>Online chat help</p>
+    </div>
+  </div>

@@ -1,0 +1,55 @@
+// Place all the styles related to the profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#generalsettings
+{
+  font-size:0.8em;
+}
+.espan
+{
+  margin-top:50px;
+  text-align:center;  
+}
+#email
+{
+  color:gray;
+  height:120px;
+  text-align:center;
+  margin-top:0.9px;
+  background:whitesmoke;
+}
+#vidad
+{
+  margin-top:10px;
+}
+#leftcolumn
+{
+  float:left;
+}
+#rightcolumn
+{
+  float:right;
+}
+iframe
+{
+  width:170px;
+  height:100px;
+}
+#blog
+{
+  height:20px;
+}
+#footer
+{
+  border-top: 1px gray;
+  border-style:solid;
+  border-right:0px;
+  border-left:0px;
+  border-bottom:0px;
+}
+#btn
+{
+  font-size:10px;
+  
+}

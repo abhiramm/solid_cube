@@ -10,6 +10,10 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'figaro'
+gem 'auto_html'
+gem 'carrierwave'
+gem 'rmagick'
+gem 'bigbluebutton_rails'
 group :assets do
   gem 'compass-rails'
   gem 'therubyracer', :platform=>:ruby

@@ -1,0 +1,141 @@
+<p id="notice"><%= notice %></p>
+<div class="large-6 small-centered columns">
+  <h1> Create session</h1>
+</div>
+<div class="row">
+  <div class="large-8 columns">
+    <div class="large-6 columns">
+      Subject:
+    </div>
+    <div class="large-6 columns">
+      <%= @conference.subject %>
+    </div>
+    <div class="large-6 columns">
+      Category:
+    </div>
+    <div class="large-6 columns">
+      <%= @conference.category %>
+    </div>
+    <div class="large-6 columns">
+      <div class="titleconf">
+        Class room
+      </div>
+      <div class="large-6 columns">
+        Start Date:
+      </div>
+      <div class="large-6 columns">
+        <%= @conference.class_start %>
+      </div>
+      <div class="large-6 columns">
+        Start Time:
+      </div>
+      <div class="large-6 columns">
+        <%= @conference.class_start %>
+      </div>
+      <div class="large-12 columns">
+        Recurrance:
+      </div>
+
+    </div>
+    <div class="large-6 columns">
+      <div class="titleconf">
+        Telecaster
+      </div>
+      <div class="large-6 columns">
+        End Date:
+      </div>
+      <div class="large-6 columns">
+        <%= @conference.class_end %>
+      </div>
+      <div class="large-6 columns">
+        End Time:
+      </div>
+      <div class="large-6 columns">
+        <%= @conference.class_end %>
+      </div>
+      <div class="large-12 columns">
+        <%= @conference.recurrence %>
+      </div>
+    </div>
+    <div class="large-6 columns">
+      Slots Available
+    </div>
+    <div class="large-6 columns">
+      <%= @conference.slots_avialable %>
+    </div>
+    <div class="large-6 columns">
+      Cost
+    </div>
+    <div class="large-6 columns">
+      <%= @conference.cost %>
+    </div>
+    <div class="large-6 columns">
+      <b>Payment Options</b>
+    </div>
+    <div class="large-6 columns">
+      <%= @conference.payment_options %>
+    </div>
+
+    <div class="large-6 columns">
+      <b>Alternate Contact Details</b>
+    </div>
+    <div class="large-6 columns">
+      <%= @conference.alternate_contact_details %>
+    </div>
+  </div>
+  <div class="large-4 columns">
+
+  </div>
+</div>
+
+<!--
+<p>
+  <b>Class start:</b>
+  <%= @conference.class_start %>
+</p>
+
+<p>
+  <b>Class end:</b>
+  <%= @conference.class_end %>
+</p>
+
+<p>
+  <b>Slots available:</b>
+  <%# @conference.slots_available %>
+</p>
+
+<p>
+  <b>Recurrence:</b>
+  <%= @conference.recurrence %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%= @conference.cost %>
+</p>
+
+<p>
+  <b>Payment options:</b>
+  <%= @conference.payment_options %>
+</p>
+
+<p>
+  <b>Alternate contact details:</b>
+  <%= @conference.alternate_contact_details %>
+</p>
+
+<p>
+  <b>Upload demo video:</b>
+  <%= @conference.upload_demo_video %>
+</p>
+
+<p>
+  <b>Upload ad:</b>
+  <%= @conference.upload_ad %>
+</p>
+--!>
+
+<%= link_to 'Start session', new_bigbluebutton_room_path, :class => "button small start_right" %> <br />
+
+<%= link_to 'Edit', edit_conference_path(@conference) %> |
+<%= link_to 'Back', conferences_path %>

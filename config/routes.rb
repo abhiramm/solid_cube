@@ -1,8 +1,16 @@
 TalkingSlate::Application.routes.draw do
+  resources :conferences
+
+
+  resources :profiles
+
+bigbluebutton_routes :default
+  
+
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'profiles#new'
   end
-  root :to => "home#index"
+  
   devise_for :users
   resources :users
 end
